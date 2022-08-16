@@ -1,0 +1,5 @@
+rootProject.name = "ModuleAnnotationProcessor"
+include ':app'
+include ':annotation'
+include ':api'
+include ':compiler'
