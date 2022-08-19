@@ -9,6 +9,4 @@
 *.apk
 .svn
 build/
-gradlew
-gradlew.bat
 rep/
