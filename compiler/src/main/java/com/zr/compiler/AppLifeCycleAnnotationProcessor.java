@@ -3,12 +3,8 @@ package com.zr.compiler;
 import com.google.auto.service.AutoService;
 import com.zr.annotation.AppLifeCycle;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.io.Writer;
 import java.util.LinkedHashSet;
 import java.util.List;
-import java.util.Locale;
 import java.util.Set;
 
 import javax.annotation.processing.AbstractProcessor;
@@ -20,14 +16,11 @@ import javax.annotation.processing.RoundEnvironment;
 import javax.lang.model.SourceVersion;
 import javax.lang.model.element.Element;
 import javax.lang.model.element.Name;
-import javax.lang.model.element.NestingKind;
 import javax.lang.model.element.TypeElement;
-import javax.lang.model.type.TypeKind;
 import javax.lang.model.type.TypeMirror;
 import javax.lang.model.util.Elements;
 import javax.lang.model.util.Types;
 import javax.tools.Diagnostic;
-import javax.tools.JavaFileObject;
 
 @AutoService(Processor.class)
 public class AppLifeCycleAnnotationProcessor extends AbstractProcessor {

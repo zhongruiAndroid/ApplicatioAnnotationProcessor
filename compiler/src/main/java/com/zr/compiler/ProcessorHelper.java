@@ -1,23 +1,13 @@
 package com.zr.compiler;
 
-import com.google.gson.Gson;
-
-import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.Reader;
 import java.io.Writer;
-import java.net.URI;
-import java.net.URL;
 
-import javax.annotation.Resource;
 import javax.annotation.processing.Filer;
-import javax.annotation.processing.FilerException;
 import javax.annotation.processing.Messager;
 import javax.tools.Diagnostic;
-import javax.tools.FileObject;
 import javax.tools.JavaFileObject;
-import javax.tools.StandardLocation;
 
 
 public class ProcessorHelper {
