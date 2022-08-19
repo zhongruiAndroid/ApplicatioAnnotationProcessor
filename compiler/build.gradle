@@ -11,7 +11,7 @@ java {
     targetCompatibility = JavaVersion.VERSION_1_7
 }
 apply plugin: 'maven'
-group='com.zr.applife'
+group='com.zr.lifecycle'
 version='1.0.0'
 uploadArchives {
     repositories {
