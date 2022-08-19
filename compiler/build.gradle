@@ -1,5 +1,6 @@
 plugins {
     id 'java-library'
+    id 'maven-publish'
 }
 dependencies {
     implementation project(':annotation')
@@ -11,8 +12,8 @@ java {
     targetCompatibility = JavaVersion.VERSION_1_7
 }
 apply plugin: 'maven'
-group='com.zr.lifecycle'
-version='1.0.0'
+group = 'com.zr.lifecycle'
+version = '1.0.3'
 uploadArchives {
     repositories {
         mavenDeployer {
@@ -20,6 +21,19 @@ uploadArchives {
             //maven {
             //       url uri('rep')
             //      }
+        }
+    }
+}
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                // You can then customize attributes of the publication as shown below.
+                groupId = 'com.zr.lifecycle'
+                artifactId = 'compiler'
+                version = '1.0.3'
+            }
         }
     }
 }
