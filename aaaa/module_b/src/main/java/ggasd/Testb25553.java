@@ -3,10 +3,11 @@ package ggasd;
 import android.app.Application;
 import android.content.Context;
 import android.content.res.Configuration;
+import android.util.Log;
 
 import com.zr.annotation.AppLifeCycle;
 import com.zr.api.AppLifecycleListener;
-import com.zr.api.Helper;
+
 
 @AppLifeCycle("module_b")
 public class Testb25553 implements AppLifecycleListener {
@@ -17,7 +18,7 @@ public class Testb25553 implements AppLifecycleListener {
 
     @Override
     public void onCreate(Application application) {
-        Helper.log(getClass(),0);
+        Log.i("=====","onCreate=====0");
     }
 
     @Override

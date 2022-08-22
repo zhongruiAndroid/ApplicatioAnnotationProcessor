@@ -14,8 +14,14 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField("String", "moduleName","\"${project.name}\"")
-
+        Set<Project> list= getRootProject().subprojects
+        StringBuilder sb=new StringBuilder()
+        for (Project item:list){
+            sb.append(item.name)
+            sb.append("|")
+        }
+        println("===============读取到的模块==============="+sb.toString())
+        buildConfigField("String", "moduleName","\"${sb.toString()}\"")
 
     }
 

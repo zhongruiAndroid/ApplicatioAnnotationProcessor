@@ -7,7 +7,7 @@ import android.util.Log;
 
 import com.zr.annotation.AppLifeCycle;
 import com.zr.api.AppLifecycleListener;
-import com.zr.api.Helper;
+
 
 @AppLifeCycle("app")
 public class Test10 implements AppLifecycleListener {
@@ -18,7 +18,7 @@ public class Test10 implements AppLifecycleListener {
 
     @Override
     public void onCreate(Application application) {
-        Helper.log(getClass(),9);
+        Log.i("=====","onCreate=====9");
     }
 
     @Override

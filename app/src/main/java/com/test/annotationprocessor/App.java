@@ -12,6 +12,7 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        AppLifecycleHelper.setModuleName(BuildConfig.moduleName);
         AppLifecycleHelper.get().onCreate(this);
     }
 

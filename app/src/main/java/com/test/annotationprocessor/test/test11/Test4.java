@@ -3,10 +3,10 @@ package com.test.annotationprocessor.test.test11;
 import android.app.Application;
 import android.content.Context;
 import android.content.res.Configuration;
+import android.util.Log;
 
 import com.zr.annotation.AppLifeCycle;
 import com.zr.api.AppLifecycleListener;
-import com.zr.api.Helper;
 
 @AppLifeCycle("app")
 public class Test4 implements AppLifecycleListener {
@@ -17,7 +17,7 @@ public class Test4 implements AppLifecycleListener {
 
     @Override
     public void onCreate(Application application) {
-        Helper.log(getClass(),0);
+        Log.i("=====","onCreate=====0");
     }
 
     @Override

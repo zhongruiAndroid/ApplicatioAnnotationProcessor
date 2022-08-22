@@ -8,7 +8,7 @@ import android.util.Log;
 import com.test.annotationprocessor.test2.TestParent;
 import com.zr.annotation.AppLifeCycle;
 import com.zr.api.AppLifecycleListener;
-import com.zr.api.Helper;
+
 
 
 @AppLifeCycle("app")
@@ -22,7 +22,6 @@ public class test1 extends TestParent implements AppLifecycleListener {
 
     @Override
     public void onCreate(Application application) {
-        Helper.log(getClass(),13);
     }
 
     @Override
