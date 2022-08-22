@@ -12,13 +12,21 @@ import java.util.Comparator;
 import java.util.List;
 
 public class AppLifecycleHelper {
-    private static String moduleName = BuildConfig.moduleName;
+    private static String moduleName = "";
     public static final String PROXY_CLASS_PACKAGE_NAME = "com.zr.lifecycle.proxy";
     public static final String PROXY_CLASS_SIMPLE_NAME = "AppLifecycle$$Application";
 
-    public static void setModuleName(String moduleName){
-        AppLifecycleHelper.moduleName=moduleName;
+    public static void setModuleName(String moduleName) {
+        AppLifecycleHelper.moduleName = moduleName;
     }
+
+    public static void addModuleName(String moduleName) {
+        if (moduleName == null || moduleName.replace(" ", "").length() <= 0) {
+            return;
+        }
+        AppLifecycleHelper.moduleName = AppLifecycleHelper.moduleName + "|" + moduleName;
+    }
+
     /**********************************************************/
     private static AppLifecycleHelper singleObj;
 
@@ -52,6 +60,9 @@ public class AppLifecycleHelper {
         String PROXY_CLASS_NAME;
         for (int i = 0; i < length; i++) {
             String moduleName = split[i];
+            if (moduleName == null || moduleName.trim().length() <= 0) {
+                continue;
+            }
             int startIndex = 0;
             boolean flag = true;
 
